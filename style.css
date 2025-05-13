@@ -1,0 +1,1529 @@
+
+
+:root {
+    --primary-font:"Roboto", sans-serif;
+    --secondary-font:"DM Serif Display",serif;
+
+    --text-color:#2d3f31;
+    --text-color-1:#6a6f73;
+    --udemy-color:#6d28d2;
+    --udemy-hover-color:#a435f0;
+    --dropdown-box-shadow: 0 0 0 1px #d1d7dc, 0 2px 4px rgba(0,0,0,.08), 0 4px 12px rgba(0,0,0,.08);
+}
+/*Reset default browser style*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+}
+
+body{
+    overflow-x: hidden;
+    font-family: var(--primary-font);
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+ul, li{
+    list-style: none;
+}
+
+/* standard font documents */
+
+.lg-h-font{
+    font-family: var(--secondary-font);
+    font-size: 3.5rem;
+}
+
+.h-font{
+    font-family: var(--secondary-font);
+    font-size: 1.9rem;
+    font-weight: 400;
+}
+
+.lg-font{
+    font-family: var(--primary-font);
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.sm-font{
+    font-size: 1.4rem;
+    font-weight: 400;
+    font-family: var(--primary-font);
+}
+
+.p-font{
+    font-size: 1.8rem;
+    font-weight: 600;
+    font-family: var(--primary-font);
+}
+
+/* button for navbar sub contents */
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1px;
+    color: white;
+    background-color: var(--udemy-color);
+    outline: none;
+    border:none;
+    font-family: var(--primary-font);
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin: 0 0.3rem;
+    min-width: 8rem;
+    height: 4rem;
+    border-radius: 5px;
+}
+
+.btn:hover{
+    background-color: var(--udemy-hover-color);
+}
+
+/* Styiling main header */
+
+.logo img{
+    height: 34px;
+    width: 91px;
+}
+
+.main-header{
+    height: 7.2rem;
+    background-color: white;
+    box-shadow: 0 0 0 1px #d1d7dc, 0 2px 4px rgba(0,0,0,.08), 0 4px 12px rgba(0,0,0,.08);
+    padding: 0 2.4rem;
+    display: flex;
+}
+
+.nav-header{
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+
+.nav-header .search-form-container{
+    flex: 1;
+    height: 4.8rem;
+    background: transparent;
+    min-width: 18rem;
+    border: 1px solid black;
+    border-radius: 2.4rem;
+}
+
+.nav-header .search-form-container:hover{
+    background-color: #6a6f730d;
+}
+
+.nav-header .search-form-container form{
+
+    display: flex;
+    height: inherit;
+    overflow: hidden;
+
+    
+}
+
+.nav-header .search-form-container form input{
+    flex: 1;
+    outline: none;
+    border: none;
+    background:transparent;
+}
+
+.nav-header .search-form-container form button{
+
+ outline: none;
+ border: none;
+ background: transparent;
+ padding: 0 1.5rem;
+}
+
+.nav-header .nav-item{
+    margin: 0 0.5rem;
+    cursor: pointer;
+    font-size: 1.4rem;
+    color: var(--text-color-1);
+       
+}
+
+.nav-links{
+    padding: 1.5rem;
+}
+
+.nav-links:hover{
+    background-color:#5524d01d;
+    border-radius: 5px;
+    color: var(--udemy-color);
+}
+
+.nav-header .nav-right{
+    display: flex;
+    align-items: center;
+
+}
+
+.nav-item .nav-login-btn{
+    padding: 1.4rem;
+    background: transparent;
+    border: 1px solid var(--udemy-color);
+    border-radius: 5px;
+    font-weight: 600;
+    color: var(--udemy-color);
+}
+.nav-header .nav-login-btn:hover{
+    background-color:#5524d01d;
+}
+
+.nav-item .nav-sign-btn{
+    padding: 1.4rem;
+    background-color: var(--udemy-color);
+    border-radius: 5px;
+    color: white;
+    border: none;
+    font-weight: 600;
+}
+
+.nav-item .nav-sign-btn:hover{
+    background-color: var(--udemy-hover-color);
+}
+
+.nav-item .nav-globe-btn{
+    padding: 1.4rem;
+    background: transparent;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.nav-item .nav-globe-btn:hover{
+    background-color:#5524d01d;
+}
+
+
+
+/* Styling main header dropdown */
+
+.nav-dropdown{
+    position: relative;
+}
+
+.dropdown-content{
+    position:absolute;
+    padding: 2.5rem 0;
+    z-index: 1; 
+    display: none;
+    
+}
+
+.dropdown-list{
+    background-color: white;
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+
+.dropdown-list li a,h4{
+    display: block;
+    padding: 1rem 2rem;
+    min-width: 25rem;
+    letter-spacing: 0.5px;
+    color: var(--text-color);
+}
+
+.dropdown-list li a:hover{
+    color: var(--udemy-color);
+    background-color:#5524d01d;
+    
+}
+
+.nav-dropdown:hover .dropdown-content{
+    display: block;
+}
+
+.left{
+    left: -3rem;
+}
+
+/* Styling main header dropdown type2 */
+
+.dropdown-panel{
+    background-color: white;
+    min-width: 30rem;
+    padding: 2rem;
+    box-shadow: var(--dropdown-box-shadow);
+    border-radius: 5px;
+
+}
+
+
+.right{
+  right: 0;
+}
+
+.p-font2{
+    align-items: center;
+    text-align: center;
+    margin-bottom: 1.8rem;
+    color: black;
+}
+
+.p-font3{
+    align-items: center;
+    text-align: center;
+    margin-bottom: 1.8rem;
+    color: var(--text-color-1);
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.link-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--udemy-color);
+    outline: none;
+    border:none;
+    font-family: var(--primary-font);
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin: 0 0.3rem;
+    min-width: 8rem;
+   
+}
+.link-btn:hover{
+    color: var(--udemy-hover-color);
+}
+
+.dropdown-item a i{
+   float: right;
+   font-size: 0.8rem;
+   margin-top: 5px;
+}
+
+.dropdown-sub-content{
+    position:absolute;
+    margin-left: 24.9rem;
+    z-index: 1;
+    display: none;
+    top: 2.5rem;
+    
+}
+
+.dropdown-sub-list{
+    background-color: white;
+    border: 1px solid #eee;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-left: .3px solid rgba(128, 128, 128, 0.715) ;
+}
+
+.dropdown-career:hover .dropdown-sub-content{
+    display: block;
+}
+
+.dropdown-Certification:hover .dropdown-sub-content{
+    display: block;
+}
+
+.dropdown-Development:hover .dropdown-sub-content{
+    display: block;
+}
+
+.dropdown-business:hover .dropdown-sub-content{
+    display: block;
+}
+.dropdown-fin:hover .dropdown-sub-content{
+    display: block;
+}
+.dropdown-IT:hover .dropdown-sub-content{
+    display: block;
+}
+.dropdown-office:hover .dropdown-sub-content{
+    display: block;
+}
+.dropdown-personal:hover .dropdown-sub-content{
+    display: block;
+}
+.dropdown-design:hover .dropdown-sub-content{
+    display: block;
+}
+.dropdown-marketing:hover .dropdown-sub-content{
+    display: block;
+}
+.dropdown-lifestyle:hover .dropdown-sub-content{
+    display: block;
+}
+.dropdown-photography:hover .dropdown-sub-content{
+    display: block;
+}
+.dropdown-health:hover .dropdown-sub-content{
+    display: block;
+}
+.dropdown-music:hover .dropdown-sub-content{
+    display: block;
+}
+.dropdown-teaching:hover .dropdown-sub-content{
+    display: block;
+}
+
+/* styling banner section*/
+
+.hero{
+    position: relative;
+    max-width: 134rem;
+    margin: 0 auto;
+    
+}
+
+
+.hero .banner-quote{
+    position: absolute;
+    left: 7.2rem;
+    top: 7rem;
+    background-color: white;
+    padding: 2rem 2rem 2rem 5rem;
+    max-width: 40rem;
+    height: 25rem;
+    border-radius: 5px;
+}
+
+.hero .banner-quote p{
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+    font-size: 1.4rem;
+    letter-spacing: .5px;
+}
+
+.hero .banner-quote button{
+    padding: 1rem 2rem 1rem 2rem;
+    border: none;
+    background-color: var(--udemy-color);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+.hero .banner-quote button:hover{
+
+    background-color: var(--udemy-hover-color);
+}
+
+
+.hero .next-icon .left-arrow{
+
+    position: absolute;
+    top: 15rem;
+    left: 1rem;
+    color: black;
+    background-color: white;
+    font-size: 1.5rem;
+    padding: 1.3rem 1.5rem 1.3rem 1.5rem ;
+    border-radius: 50%;
+}
+
+.hero .next-icon .right-arrow{
+
+    position: absolute;
+    top: 15rem;
+    left: 95%;
+    color: black;
+    background-color: white;
+    font-size: 1.5rem;
+    padding: 1.3rem 1.5rem 1.3rem 1.5rem ;
+    border-radius: 50%;
+}
+
+.hero .next-icon .left-arrow:hover{
+    background-color: rgba(255, 255, 255, 0.941)
+   
+}
+
+.hero .next-icon .right-arrow:hover{
+    background-color: rgba(255, 255, 255, 0.941)
+   
+}
+
+/* Card section styling */
+
+.card-section1{
+    position: relative;
+    top: 4.3rem;
+    left: 3rem;
+    max-width: 130rem;
+    margin: 0 auto;
+}
+
+.card-section1 p{
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+    font-size: 2rem;
+    letter-spacing: .5px;
+    color: #6a6f73;
+    font-style: var(--secondary-font);
+}
+
+.card {
+    position: relative;
+    margin-right: 2rem;
+    float: left;
+    border: .5px solid rgba(0, 0, 0, 0.197);
+    border-radius: 10px;
+    width: 40rem;
+    height: 35rem;
+    cursor: pointer;
+}
+
+.card:hover{
+    background-color: #6c28d20d;
+}
+
+.card img{
+    padding: 2rem 2rem 2rem 2rem;
+    width: 40rem;
+    border-radius: 30px;
+}
+
+
+.card .card-title{
+    position: relative;
+    font-size: 1.8rem;
+    font-family: var(--primary-font);
+    left: 2rem;
+}
+
+.card .card-text{
+    position: relative;
+    font-family: var(--primary-font);
+    font-size: 1.2rem;
+    left: 2rem;
+    
+}
+
+.card ul li a{
+    position: relative;
+    float: left;
+    left: 1rem;
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    color: #6a6f73;
+    padding: 0.3rem 0.3rem 0.2rem;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+.card i{
+   color: #de8a14;
+}
+
+.card-section1 .btn-card{
+    position: relative;
+    top: 3rem;
+    font-size: 1.5rem;
+    font-family: var(--primary-font);
+    font-weight: 600;
+    background: transparent;
+    padding: 1rem .5rem 1rem .5rem;
+    color: var(--udemy-color);
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.card-section1 .btn-card:hover{
+    background-color: #6c28d22b;
+}
+
+/* Card section 2 styling */
+
+.card-section2{
+    position: relative;
+    top: 10rem;
+    left: 7rem;
+    max-width: 140rem;
+    margin: 0 auto;
+}
+
+.card-section2 .card-2{
+    position: relative;
+    top: 2rem;
+    margin-right: 2rem;
+    float: left;
+    background-color: #6a6f7326;
+    width: 25rem;
+    height: 15rem;
+    text-align: center;
+}
+
+.card-2 img{
+    padding: 2rem 2rem 2rem 2rem;
+    width: 15rem;
+   
+    transition: transform 0.2s ease;
+}
+
+.card-2 p{
+    position: relative;
+    top: 1rem;
+    color: #6a6f73;
+    font-family: var(--primary-font);
+    font-size: 1.2rem;;
+    cursor: pointer;
+    
+}
+
+.card-title{
+    position: relative;
+    top: 1rem;
+    cursor: pointer;
+}
+ .card-2 img:hover{
+    cursor: pointer;
+    transform: scale(1.5);
+}
+
+/* section 3 styling */
+
+.section-3{
+    position: relative;
+    top: 20rem;
+    left: 12rem;
+ 
+    margin-top: 15rem;
+
+   
+    
+    
+}
+
+.section-3 p{
+    position: relative;
+    top: 2rem;
+    font-size: 1.5rem;
+}
+
+.section-3 ul li{
+    position: relative;
+    top: 5rem;
+    float: left;
+    margin-right: 2rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    height: 10rem;
+}
+
+.section-3 ul a{
+    color: rgb(101, 101, 101);
+}
+
+.section-3 ul a:hover{
+    color: black;
+}
+
+.horizontal-line{
+    position: relative;
+   
+    width: 120rem;
+
+}
+
+.sub-section-3{
+    
+    position: relative;
+    background-color: rgba(179, 195, 199, 0.192);
+    top: 20rem;
+    height: 65rem;
+    
+   
+}
+
+
+.sub-section3-btn ul li{
+    position: relative;
+    top: 5rem;
+    margin-right: 3.3rem;
+    left: 11rem;
+    display: inline-block;
+    font-size: 1.5rem;
+    align-items: center;
+    color: black;
+    background-color: rgba(101, 101, 101, 0.171);
+    padding: 1.5rem;
+    border: none;
+    border-radius: 30px;
+    height: 6rem;
+
+}
+
+
+.sub-section3-btn ul li:hover{
+    
+    background-color: rgba(39, 38, 38, 0.368);
+    cursor: pointer;
+}
+
+.sub-section3-btn p{
+    top: .5rem;
+    font-size: 1rem;
+    color: var(--text-color-1);
+}
+
+/*section-3 cards styiling */
+
+.card-section-3{
+    position: relative;
+   top: 11rem;
+
+}
+.card-3 {
+    position: relative;
+    left: 11rem;
+    margin-right: 2rem;
+    border: .5px solid rgba(0, 0, 0, 0.197);
+    border-radius: 10px;
+    width: 32rem;
+    background-color: white;
+    display: inline-block;
+    cursor: pointer;
+    
+}
+
+
+.card-img-3{
+    height: 20rem;
+    width: 32rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+
+.card-body-3{
+    padding: 2rem 3rem 2rem 1rem;
+    text-align: left;
+    width: 35rem;
+}
+
+
+.card-body-3 ul li{
+    position: relative;
+    display: inline-block;
+    margin-right: 0.5rem;
+    padding-top: 1rem;
+}
+
+
+.card-body-3 .price-section3{
+    position: relative;
+    padding-top: 1rem;
+}
+
+
+.card-body-3 .card-text-3{
+    font-size: 1.3rem;
+    color: var(--text-color-1);
+    padding-top: 2rem;
+}
+
+.card-body-3 .Premium,.Bestsellers{
+    box-sizing: border-box;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem;
+
+}
+
+.card-body-3 .Premium{
+    background-color: var(--udemy-color);
+    color: white;
+}
+
+.card-body-3 .Bestsellers{
+    background-color: rgba(109, 170, 138, 0.553);
+    color: rgba(13, 84, 48, 0.99);
+}
+
+.card-rating-num{
+    color: rgb(81, 39, 5);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.card-rating-stars{
+    color: rgb(163, 78, 8);
+}
+
+.card-rating-review{
+    color: var(--text-color-1);
+    font-size: 1.2rem;
+}
+
+.btn-section-3{
+    position: relative;
+    top: 3rem;
+    left: 11rem;
+    font-size: 1.5rem;
+    font-family: var(--primary-font);
+    font-weight: 600;
+    background: transparent;
+    padding: 1rem .5rem 1rem .5rem;
+    color: var(--udemy-color);
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.btn-section-3:hover{
+    background-color: #6c28d22b;
+}
+
+
+/* section 4 styling*/
+
+.section-4{
+position: relative;
+margin-top: 25rem;
+height: 20rem;
+}
+
+.section4-title{
+    position: relative;
+    left: 11rem;
+    padding: 2rem;
+    bottom: 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: var(--primary-font);
+    color: var(--text-color-1);
+    font-weight: lighter;
+}
+
+.section-4 ul li{
+    position: relative;
+    display: inline-block;
+    left: 11rem;
+    margin-right: 8rem;
+    
+}
+
+/*Section 5 styling*/
+
+.section-5{
+    position: relative;
+    left: 11rem;
+   
+}
+
+.card-section5{
+    position: relative;
+    top: 3rem;
+
+}
+
+.card-5 {
+    position: relative; 
+    margin-right: 2rem;
+    width: 25rem;
+    background-color: white;
+    display: inline-table;
+}
+
+.card-img-5{ 
+    width: 25rem;
+}
+
+.card-body-5{
+    padding: rem;
+}
+
+
+.card-body-5 ul li{
+    position: relative;
+    display: inline-block;
+    margin-right: 0.5rem;
+    padding-top: 1rem;
+}
+
+
+.card-body-5 .price-section5{
+    position: relative;
+    padding-top: 1.5rem;
+}
+
+
+.card-body-5 .card-text-5{
+    font-size: 1.2rem;
+    color: var(--text-color-1);
+    padding-top: 1rem;
+}
+
+.card-body-5 .Premium,.Bestsellers{
+    box-sizing: border-box;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem;
+
+}
+
+.card-body-5 .Premium{
+    background-color: var(--udemy-color);
+    color: white;
+}
+
+.card-body-5 .Bestsellers{
+    background-color: rgba(109, 170, 138, 0.553);
+    color: rgba(13, 84, 48, 0.99);
+}
+
+.card-rating-num{
+    color: rgb(81, 39, 5);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.card-rating-stars{
+    color: rgb(163, 78, 8);
+}
+
+.card-rating-review{
+    color: var(--text-color-1);
+    font-size: 1.2rem;
+}
+
+/*Section 6 styling */
+
+.section-6{
+    position: relative;
+    top: 5rem;
+    background-color: rgba(179, 195, 199, 0.192);
+    height: 85rem;
+}
+
+.section-6 .left-section{
+    position: relative;
+    top: 5rem;
+    left: 11rem;
+}
+
+.section-6 .card-6{
+    box-sizing: border-box;
+    position: relative;
+    top: 2rem;  
+    max-width: 50rem;
+    height: 16rem;
+    padding: 2rem;
+   border-left: 8px solid transparent;
+    border-right: 1px solid transparent;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-radius: 5px;
+    background-color: white;
+    overflow: hidden;
+}
+
+.section-6 .card-6:hover{
+
+    border-left: 8px solid var(--udemy-hover-color);
+    border-right: 1px solid var(--udemy-hover-color);
+    border-top: 1px solid var(--udemy-hover-color);
+    border-bottom: 1px solid var(--udemy-hover-color);
+    border-radius: 5px;
+    background-color: white;
+}
+
+.card-6 .card-body-6{
+    position: relative;
+    margin: 1rem;
+    
+}
+
+.card-body-6 h2{
+    font-family: var(--primary-font);
+    font-size: 2rem;
+}
+
+.card-body-6 p{
+    padding-top: 1rem;
+    font-family: var(--primary-font);
+    font-size: 1.2rem;
+    color: var(--text-color-1);
+    line-height: 2rem;
+}
+
+.card-body-6 img{
+    width: 8rem;
+    float: left;
+    margin-right: 2rem;
+}
+
+.card-6 a{
+    position: relative;
+    top: 1.5rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: var(--udemy-color);
+    font-weight: 600;
+    font-family: var(--primary-font);
+    border-radius: 5px;
+}
+
+.card-6 a:hover{
+    background-color:#6c28d237;
+}
+
+.left-section ul li{
+    margin-top: 2rem;
+}
+
+
+.right-section-img{
+    position: relative;
+    max-width: 57rem;
+    float: right;
+    top: -60rem;
+    left: -20rem;
+}
+
+/* Section-7 styling*/
+.section-7{
+    position: relative;
+    top: 10rem;
+    left: 11rem;
+    width: 142rem;
+}
+
+.title-section-7 .subtitle-section7{
+    padding: 1rem 0 2rem 0;
+    font-family: var(--primary-font);
+    font-size: 1.6rem;
+    color: var(--text-color-1);
+}
+
+
+
+.card-7 {
+    position: relative;
+    border: .5px solid rgba(0, 0, 0, 0.197);
+    border-top: 10px solid var(--udemy-color);
+    border-radius: 10px;
+    width: 45rem;
+}
+
+.card-section-7 {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem; /* space between cards */
+    flex-wrap: nowrap; /* all cards in one row */
+}
+
+
+.card-7 .card-title-section7{
+    position: relative;
+    padding: 2rem;
+    background-color: #6a6f730e;
+    
+}
+
+.card-7 .card-title-section7 h2{
+    font-size: 2rem;
+    font-family: var(--primary-font);
+    
+}
+
+.card-7 .card-title-section7 .h2-subtitle{
+    font-size: 1.2rem;
+    font-family: var(--primary-font);
+    
+}
+
+.card-7 .card-title-section7 .subtitle-2{
+    font-family: var(--primary-font);
+    font-size: 1.5rem;
+    color: var(--text-color-1);
+    padding: 1rem;
+}
+
+.card-7 .card-body-section7{
+    padding: 2rem;
+}
+
+.card-body-section7 h3{
+    font-family: var(--primary-font);
+    font-size: 1.8rem;
+}
+
+.card-body-section7 p{
+    font-family: var(--primary-font);
+    color: var(--text-color-1);
+    font-size: 1.2rem;
+    line-height: 2rem;
+    margin-bottom: 1.5rem;
+    
+}
+
+
+.card-body-section7 button{
+    position: relative;
+    font-family: var(--primary-font);
+    color: white;
+    background-color: var(--udemy-color);
+    padding: 2rem 4rem 2rem 4rem;
+    width: 40rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    border: none;
+    border-radius: 5px;
+    
+}
+
+.btn-section-7{
+    margin-top: 1.8rem;
+}
+
+.card-body-section7 button:hover{
+    background-color: var(--udemy-hover-color);
+}
+
+.card-body-section7 ul li{
+    position: relative;
+    font-family: var(--primary-font);
+    width: 30rem;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    
+}
+
+.card-body-section7 ul li i{
+    color: rgb(2, 52, 2);
+   
+}
+
+/* Section 8 styling*/
+
+.section-8{
+    margin-top: 15rem;
+    position: relative;
+    max-width: 155rem;
+    height: 70rem;
+    background-color: #6a6f7325;
+    display: flex;
+    gap: 10rem;
+}
+
+.leftside-section-8{
+    position: relative;
+    max-width: 22rem;
+    top: 15rem;
+    left: 11rem;
+    
+}
+
+.title-section-8{
+    position: relative;
+    font-family: var(--secondary-font);
+    font-size: 4rem;
+    bottom: 3rem;
+}
+
+.leftside-section-8 p{
+    font-family: var(--primary-font);
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+}
+
+.btn-section-8{
+    position: relative;
+    top: 3rem;
+    font-size: 1.5rem;
+    font-family: var(--primary-font);
+    font-weight: 600;
+    background: transparent;
+    padding: 1rem .5rem 1rem .5rem;
+    color: var(--udemy-color);
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.btn-section-8:hover{
+    background-color: #6c28d22b;
+}
+
+
+.img-section-8{
+    
+    max-width: 120rem;
+    
+}
+
+
+/* section 9 styling */
+
+.section-9{
+    position: relative;
+    width: 100%;
+    height: 40rem;
+}
+
+.section-9 .title-section-9{
+    position: relative;
+    left: 8rem;
+    padding: 2rem;
+}
+
+.section-9 .title-section-9 hr{
+    margin-top: 1rem;
+    width: 92%;
+    font-weight: 50;
+}
+
+.section-9 .left-section-9 {
+    position: relative;
+    left: 9rem;
+    padding: 1rem;
+    width: 30rem;
+    height: 30rem;
+    
+}
+
+
+
+.section-9 .left-section-9 .left-title{
+    font-size: 3rem;
+    padding-bottom: 2rem;
+}
+
+.section-9 .left-section-9 a{
+    font-size: 2rem;
+    font-weight: 600;
+    padding-bottom: 2rem;
+    color: var(--udemy-color);
+
+}
+
+.section-9 .left-section-9 p{
+    font-size: 1.5rem;
+    padding-top: 1.5rem;
+    padding-bottom:2rem ;
+    color: var(--text-color-1);
+}
+
+.btn-section-9{
+    position: relative;
+    top: 3rem;
+    font-size: 1.5rem;
+    font-family: var(--primary-font);
+    font-weight: 600;
+    background: transparent;
+    padding: 1rem .5rem 1rem .5rem;
+    color: var(--udemy-color);
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 30rem;
+}
+
+.btn-section-9:hover{
+    background-color: #6c28d22b;
+}
+
+.section-9 .right-section-9{
+    position: relative;
+    top: -30rem;
+    width: 100rem;
+    height: 30rem;
+    float: right;
+
+}
+
+.section-9 .right-section-9 ul{
+    margin-right: 3rem;
+    display: inline-block;
+}
+
+.section-9 .right-section-9 h2{
+    font-size: 2.5rem;
+    padding: 2rem;
+}
+
+.section-9 .right-section-9 a{
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 2rem;
+    color: var(--udemy-color);
+
+}
+
+
+.section-9  a:hover{
+    color: var(--udemy-hover-color);
+
+}
+
+.section-9  i{
+    font-size: 1rem;
+    
+}
+
+.section-9 .right-section-9 p{
+    font-size: 1.5rem;
+    padding-left: 2rem;
+    padding-top: 1.5rem;
+    padding-bottom:2rem ;
+    color: var(--text-color-1);
+    
+}
+
+/* Footet section styling*/
+
+.title-footer-section{
+    position: relative;
+    
+    height: 8rem;
+    padding-left: 8rem;
+    background-color: rgba(37, 40, 44, 0.923);
+   
+}
+
+.title-footer-section .title-s-9 {
+    position: absolute;
+    top: 3rem;
+    display: flex;
+}
+
+.title-footer-section .title-s-9 a{
+    font-size: 1.8rem;
+    position: relative;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    color: rgb(110, 110, 238);
+    font-weight: 600;
+}
+
+.title-footer-section .title-s-9 a:hover{
+    text-decoration: underline;
+}
+
+.title-s-9 h2{
+   
+    font-size: 1.8rem;
+    color: white;
+}
+
+.title-footer-section ul{
+   position: absolute;
+   top: 2rem;
+   left: 50%;
+   width: 60rem;
+    margin-left: 15rem;
+
+}
+
+.title-footer-section ul li{
+   margin-right: 4rem;
+   display: inline-block;
+
+}
+
+
+/* footer-subsection styling */
+
+.footer-subsection{
+    position: relative;
+    top: 0.1rem;
+    background-color: rgba(37, 40, 44, 0.923);
+    color: white;
+    width: 100%;
+    height: 60rem;
+}
+
+.footer-subsection h1{
+    position: relative;
+    top: 2rem;
+    left: 8rem;
+
+}
+.first-navsection{
+    position: relative;
+     margin-right: 5rem;
+     display: inline-table;
+     top: -15rem;
+}
+
+.first-navsection ul{
+    position: relative;
+    display: inline-table;
+    padding: 3rem;
+      margin-left: 10rem;
+     left: 5rem;
+}
+
+
+.second-navsection{
+    position: relative;
+    display: inline-table;
+    top: -15rem;
+}
+
+.second-navsection ul{
+    position: relative;
+    display: inline-table;
+    padding: 3rem;
+      margin-left: 10rem;
+     left: 5rem;
+}
+
+
+.footer-subsection ul li{
+    position: relative;
+    font-size: 1.2rem;
+    color: white;
+    padding: 0.5rem 0 0.5rem 0;
+
+}
+
+.footer-subsection ul li a{
+    font-size: 1.5rem;
+    color: white;
+    padding: 2rem 0 2rem 0;
+
+}
+
+.footer-subsection ul li a:hover{
+    text-decoration: underline;
+
+}
+
+/* Footer section-3 styling*/
+
+.footer-section-3{
+    width: 100%;
+    height: 25rem;
+    background-color: black;
+    color: white;
+
+}
+
+
+.footer-section-3 ul{
+    position: relative;
+    display: inline-table;
+    padding: 3rem;
+     margin-left: 10rem;
+     left: 5rem;
+}
+
+.footer-section-3 ul li {
+    position: relative;
+    font-size: 1.2rem;
+    color: white;
+    padding: 0.5rem 0 0.5rem 0;
+
+
+}
+
+.footer-section-3 ul li h2{
+    color: white;
+    font-size: 2rem;
+
+}
+
+.footer-section-3 ul li a{
+    font-size: 1.5rem;
+    color: white;
+    padding: 2rem 0 2rem 0;
+
+}
+
+.footer-section-3 ul li a:hover{
+    text-decoration: underline;
+
+}
+
+/* footer final Section styling*/
+
+.footer-final-section{
+    position: relative;
+    top: 0.1rem;
+    width: 100%;
+    height:8rem;
+    background-color: black;
+}
+
+.footer-final-section img{
+    position: relative;
+    width: 10rem;
+    top: 1.5rem;
+}
+.footer-final-section ul{
+    position: relative;
+   display: flex;
+}
+
+.footer-final-section ul li{
+    margin-left: 15rem;
+    
+}
+
+.footer-final-section ul li a{
+    position: relative;
+    top: 3rem;
+    font-size: 1.5rem;
+    margin-right: 15rem;
+    color: white;
+    
+}
+
+.btn-footer,.copyright-footer{
+    position: relative;
+    top: 3rem;
+    font-size: 1.5rem;
+    margin-right: 18rem;
+    color: white;
+    background: none;
+    border: none;
+    
+}
+
+
+.footer-final-section ul li a:hover{
+    text-decoration: underline;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
